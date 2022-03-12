@@ -1,0 +1,4 @@
+include flaskcrud/schema.sql
+graft flaskcrud/static
+graft flaskcrud/templates
+global-exclude *.pyc
