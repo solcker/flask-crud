@@ -5,24 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ url_for('static', filename='/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/style.css') }}" rel="stylesheet">
     <title>{% block title %}{% endblock %} - FlaskCRUD</title>
 </head>
 
 <body class="bg-dark">
     <header class="fixed-top">
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">FlaskCRUD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        {% if g.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.logout') }}">Log out</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.login') }}">Log In</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <section class="py-5">
         {% block content %}{% endblock %}
     </section>
-    <footer class="bg-dark text-light text-center">
+    <footer class="fixed-bottom bg-dark text-light text-center">
         Made by <a href="https://github.com/solcker">Solcker</a>
     </footer>
-    <script src=" {{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+    <script src=" {{ url_for('static', filename='/js/bootstrap.bundle.min.js') }}"></script>
 </body>
+
 </html>
