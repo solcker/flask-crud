@@ -2,7 +2,7 @@
 
 A simple implementation of flask CRUD with register and login. With this code, we can read/write tasks in a list. All users can see the task list, but only owners of task can delete/edit tasks.
 
-If you want try this program, follow the next step:
+If you want try this program, follow the next steps:
 
 ### Download or clone repository
 
