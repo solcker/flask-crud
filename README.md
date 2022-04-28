@@ -19,6 +19,7 @@ You need Python in your system to create virtual environment. So follow the step
 At this point you have files and activated virtual environment, now write de next two commands in terminal.
 
 > export FLASK_APP=flaskcrud
+
 > export FLASK_ENV=development
 
 Now you need write next command to initialize database file:
