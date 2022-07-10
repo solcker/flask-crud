@@ -1,14 +1,14 @@
 # flask-crud
 
-A simple implementation of flask CRUD with register and login. With this code, we can read/write tasks in a list. All users can see the task list, but only owners of tasks can delete/edit tasks.
+A small CRUD application implemented with Flask/Bootstrap5. In this application you can create a task log, tasks can be edited/deleted only by the user who created the task.
 
-If you want to try this program, follow the next steps:
+If you wish to try this small application, please follow the steps described below.
 
 ### Download or clone repository
 
 If you want to clone a repository, you need to install git and use the next command or download source files:
 
-> git clone https://github.com/solcker/flask-crud.git
+`git clone https://github.com/solcker/flask-crud.git`
 
 ### Create virtual environment
 
